@@ -46,7 +46,12 @@ const Header = () => {
                   <AvatarFallback>
                     {data.user.name?.[0].toUpperCase()}
                   </AvatarFallback>
-                  {data.user.image && <AvatarImage src={data.user.image} />}
+                  {data.user.image && (
+                    <AvatarImage
+                      className="h-[55px] w-[55px] rounded-[50px]"
+                      src={data.user.image}
+                    />
+                  )}
                 </Avatar>
                 <div className="flex flex-col">
                   <p className="font-medium">{data.user.name}</p>
